@@ -1,10 +1,9 @@
 # storeapp
 
 
-Resources:
+Resources:⬇️⬇️⬇️⬇️⬇️
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-
 https://fakestoreapi.com/
 
 A new Flutter project.
