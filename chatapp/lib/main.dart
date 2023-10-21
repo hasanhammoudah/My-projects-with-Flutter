@@ -1,4 +1,5 @@
 import 'package:chatapp/firebase_options.dart';
+import 'package:chatapp/screens/chat_screen.dart';
 import 'package:chatapp/screens/login_screen.dart';
 import 'package:chatapp/screens/register_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,10 +19,11 @@ class ScholarChat extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        'LoginScreen': (context) => const LoginScreen(),
+        LoginScreen.id: (context) => const LoginScreen(),
         RegisterScreen.id: (context) => const RegisterScreen(),
+        ChatScreen.id: (context) => const ChatScreen(),
       },
-      initialRoute: 'LoginScreen',
+      initialRoute: LoginScreen.id,
     );
   }
 }
