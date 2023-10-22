@@ -73,6 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 10,
                     ),
                     CustomFormTextField(
+                      obscureText: true,
                       hintText: 'Password',
                       onChanged: (value) {
                         password = value;
@@ -130,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
       setState(() {});
       try {
         await loginUser();
-        Navigator.pushNamed(context, ChatScreen.id);
+        Navigator.pushNamed(context, ChatScreen.id, arguments: email);
       } on FirebaseAuthException catch (ex) {
         if (ex.code == 'user-not-found') {
           showSnacbar(context, 'No user found for that email.');

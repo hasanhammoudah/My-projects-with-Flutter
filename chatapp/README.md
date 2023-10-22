@@ -6,6 +6,13 @@ A new Flutter project.
 
 Resources:
 https://pub.dev/packages/firebase_auth
+https://pub.dev/packages/cloud_firestore
+https://pub.dev/packages/firebase_core
+https://pub.dev/packages/modal_progress_hud_nsn
+
+-- I'm use firebase for the project Chat
+-- And i use animation 
+--And i use the refactor the code
 
 This project is a starting point for a Flutter application.
 

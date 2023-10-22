@@ -5,13 +5,15 @@ class CustomFormTextField extends StatelessWidget {
     super.key,
     this.hintText,
     this.onChanged,
+    this.obscureText = false,
   });
   final String? hintText;
   final Function(String)? onChanged;
-
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
       onChanged: onChanged,
       validator: (data) {
         if (data!.isEmpty) {

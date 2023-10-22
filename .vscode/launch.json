@@ -1,0 +1,68 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "chatapp",
+            "cwd": "chatapp",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "chatapp (profile mode)",
+            "cwd": "chatapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "chatapp (release mode)",
+            "cwd": "chatapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "notes-app",
+            "cwd": "notes-app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "notes-app (profile mode)",
+            "cwd": "notes-app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "notes-app (release mode)",
+            "cwd": "notes-app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "storeapp",
+            "cwd": "storeapp",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "storeapp (profile mode)",
+            "cwd": "storeapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "storeapp (release mode)",
+            "cwd": "storeapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
