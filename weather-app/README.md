@@ -8,6 +8,10 @@ Resources:
 
 https://www.weatherapi.com/
 
+https://pub.dev/packages/dio
+
+https://pub.dev/packages/flutter_bloc
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
