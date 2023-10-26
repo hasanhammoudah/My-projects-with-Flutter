@@ -1,26 +1,22 @@
 # storeapp
-
-
-Resources:⬇️⬇️⬇️⬇️⬇️
-
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-https://fakestoreapi.com/
-
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Resources:⬇️⬇️⬇️⬇️⬇️
 
-A few resources to get you started if this is your first Flutter project:
+-- https://pub.dev/packages/http
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+-- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-- https://fakestoreapi.com/
 
+
+<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 1" width="100" height="100">
+<br></br><br></br>
+<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 2" width="100" height="100">
+<br></br><br></br>
+<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 3" width="100" height="100" >
 
 
 Lists:: A list is an ordered collection of elements that are distinguished by their indices. List elements can be of any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.
