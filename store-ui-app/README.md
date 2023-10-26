@@ -12,11 +12,11 @@ Resources:⬇️⬇️⬇️⬇️⬇️
 -- https://fakestoreapi.com/
 
 
-<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 1" width="100" height="100">
+<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 1" width="500" height="500">
 <br></br><br></br>
-<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 2" width="100" height="100">
+<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 2" width="500" height="500">
 <br></br><br></br>
-<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 3" width="100" height="100" >
+<img src="assets/images/screenshot-1698175702219.png" alt="Example Image 3" width="500" height="500" >
 
 
 Lists:: A list is an ordered collection of elements that are distinguished by their indices. List elements can be of any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.

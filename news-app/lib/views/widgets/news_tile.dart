@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/models/article_model.dart';
 
 class NewsTile extends StatelessWidget {
-  const NewsTile({super.key});
-
+  const NewsTile({super.key, required this.articleModel});
+  final ArticleModel articleModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -10,31 +11,33 @@ class NewsTile extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(6),
-          child: Image.network(
-            'https://media.istockphoto.com/id/1465188429/photo/business-performance-monitoring-concept-businessman-using-smartphone-online-survey-filling.webp?b=1&s=170667a&w=0&k=20&c=QJ2XWQVsbaB3Rzjk8tXv1csVlvyDvtww1NXK8yHzNl0=',
-            height: 200,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
+          child: articleModel.image != null
+              ? Image.network(
+                  articleModel.image!,
+                  height: 200,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                )
+              : const SizedBox(),
         ),
         const SizedBox(
           height: 12,
         ),
-        const Text(
-          'fgxzdfzdfdzfzfzdzsfsdzfdfsefsfdsfdsfdsfdsfdssdfdsfxzfdfx',
+        Text(
+          articleModel.title.toString(),
 
           /* 'Overflow' */
           overflow: TextOverflow.ellipsis,
           maxLines: 2,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.black, fontSize: 20, fontWeight: FontWeight.w500),
         ),
         const SizedBox(
           height: 8,
         ),
-        const Text(
-          'dfsfsfdfdsfsdfsdf',
-          style: TextStyle(color: Colors.grey, fontSize: 14),
+        Text(
+          articleModel.subTitle.toString(),
+          style: const TextStyle(color: Colors.grey, fontSize: 14),
         )
       ],
     );
