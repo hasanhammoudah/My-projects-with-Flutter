@@ -1,32 +1,12 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
-import 'package:news_app/services/news_services.dart';
 import 'package:news_app/views/widgets/news_tile.dart';
 
-class NewsListView extends StatefulWidget {
+class NewsListView extends StatelessWidget {
   const NewsListView({
-    super.key,
+    super.key, required this.articles,
   });
-
-  @override
-  State<NewsListView> createState() => _NewsListViewState();
-}
-
-List<ArticleModel> articles = [];
-
-class _NewsListViewState extends State<NewsListView> {
-  @override
-  void initState() {
-    super.initState();
-    getGeneralNews();
-  }
-
-  Future<void> getGeneralNews() async {
-    articles = await NewsService(Dio()).getGeneralNews();
-    setState(() {});
-  }
-
+ final List<ArticleModel> articles;
   @override
   Widget build(BuildContext context) {
     return SliverList(
@@ -41,3 +21,5 @@ class _NewsListViewState extends State<NewsListView> {
     }));
   }
 }
+
+

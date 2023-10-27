@@ -14,9 +14,9 @@ class CategoriesListView extends StatelessWidget {
     CategoryModel('assets/images/resize.jpeg', 'health'),
     CategoryModel(
         'assets/images/hand-smartphone-records-live-music-260nw-529874515.webp',
-        'Entertaiment'),
+        'Entertainment'),
     CategoryModel('assets/images/download.jpeg', 'Science'),
-    CategoryModel('assets/images/shutterstock_739595833-min.jpg', 'Techonlogy'),
+    CategoryModel('assets/images/shutterstock_739595833-min.jpg', 'Technology'),
     CategoryModel('assets/images/technology.jpeg', 'General'),
   ];
   @override
