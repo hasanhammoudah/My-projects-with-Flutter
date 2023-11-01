@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/cubits/get_weather_cubit/get_weather_cubit.dart';
 import 'package:weather/home_view.dart';
+import 'package:weather/utils/helper.dart';
 
 void main() {
   runApp(const WeatherApp());
@@ -37,29 +38,4 @@ class WeatherApp extends StatelessWidget {
   }
 }
 
-MaterialColor getThemeColor(String? condition) {
-  if (condition == null) {
-    return Colors.blue;
-  }
-  switch (condition.toLowerCase()) {
-    // Clear or few clouds
-    case 'clear':
-    case 'sunny':
-      return Colors.orange;
-
-    // Cloudy
-    case 'cloudy':
-      return Colors.lightBlue;
-
-    // Rainy
-    case 'rain':
-    case 'showers':
-    case 'drizzle':
-      return Colors.grey;
-
-    default:
-      return Colors.grey; // Default color for unknown conditions
-  }
-}
-
-
+   //   primarySwatch: Provider.of<WeatherProvider>(context).weatherData == null ?  Colors.blue : Provider.of<WeatherProvider>(context).weatherData!.getThemeColor()  ,

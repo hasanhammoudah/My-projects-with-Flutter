@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:weather/main.dart';
 import 'package:weather/models/weather_model.dart';
+import 'package:weather/utils/helper.dart';
 
 class WeatherInfoBody extends StatelessWidget {
   const WeatherInfoBody({
     super.key,
     required this.weatherModel,
   });
-  final WeatherModel weatherModel;
+  final WeatherModel? weatherModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,9 +17,9 @@ class WeatherInfoBody extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-            getThemeColor(weatherModel.weatherCondition),
-            getThemeColor(weatherModel.weatherCondition)[300]!,
-            getThemeColor(weatherModel.weatherCondition)[50]!,
+            getThemeColor(weatherModel!.weatherCondition),
+            getThemeColor(weatherModel!.weatherCondition)[300]!,
+            getThemeColor(weatherModel!.weatherCondition)[50]!,
           ])),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -26,11 +27,11 @@ class WeatherInfoBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              weatherModel.name,
+              weatherModel!.name,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
             ),
             Text(
-              'updated at ${weatherModel.date.hour}:${weatherModel.date.minute}',
+              'updated at ${weatherModel!.date.hour}:${weatherModel!.date.minute}',
               style: const TextStyle(fontSize: 24),
             ),
             const SizedBox(
@@ -39,9 +40,9 @@ class WeatherInfoBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.network("https:${weatherModel.image!}"),
+                Image.network("https:${weatherModel!.image!}"),
                 Text(
-                  weatherModel.temp.toString(),
+                  weatherModel!.temp.toString(),
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 32),
                 ),
@@ -49,11 +50,11 @@ class WeatherInfoBody extends StatelessWidget {
                   children: [
                     /* Can I use 'toStringAsFixed' instead -> use 'round()' */
                     Text(
-                      'Maxtemp:  ${weatherModel.maxTemp.toStringAsFixed(0)}',
+                      'Maxtemp:  ${weatherModel!.maxTemp.toStringAsFixed(0)}',
                       style: const TextStyle(fontSize: 16),
                     ),
                     Text(
-                      'Mintemp: ${weatherModel.minTemp.toStringAsFixed(0)}',
+                      'Mintemp: ${weatherModel!.minTemp.toStringAsFixed(0)}',
                       style: const TextStyle(fontSize: 16),
                     ),
                   ],
@@ -61,7 +62,7 @@ class WeatherInfoBody extends StatelessWidget {
               ],
             ),
             Text(
-              weatherModel.weatherCondition,
+              weatherModel!.weatherCondition,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
             ),
           ],

@@ -1,29 +1,36 @@
+import 'package:chatapp/bloc/auth_bloc/auth_bloc.dart';
 import 'package:chatapp/constants.dart';
 import 'package:chatapp/helper/show_snacbar.dart';
 import 'package:chatapp/screens/chat_screen.dart';
 import 'package:chatapp/screens/register_screen.dart';
 import 'package:chatapp/screens/widget/custom_button.dart';
 import 'package:chatapp/screens/widget/custom_text_field.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
+
   static String id = 'LoginPage';
-
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
   GlobalKey<FormState> formKey = GlobalKey();
   String? email, password;
   bool isLoading = false;
-
   @override
   Widget build(BuildContext context) {
-    return ModalProgressHUD(
+    return BlocConsumer<AuthBloc, AuthState>(
+      listener: (context, state) {
+        if (state is LoginLoading) {
+          isLoading = true;
+        } else if (state is LoginSuccess) {
+          Navigator.pushNamed(context, ChatScreen.id);
+          isLoading = false;
+        } else if (state is LoginFailure) {
+          showSnacbar(context, state.errorMessage);
+          isLoading = false;
+        }
+      },
+      builder: (context, state) => ModalProgressHUD(
         inAsyncCall: isLoading,
         child: Scaffold(
           backgroundColor: kPrimaryColor,
@@ -39,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Image.asset(kLogo),
                     const Text(
-                      'Scholar Chat',
+                      'School Chat',
                       style: TextStyle(
                           fontSize: 32,
                           color: Colors.white,
@@ -84,7 +91,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     CustomButton(
                       onTap: () async {
-                        submitButton();
+                        if (formKey.currentState!.validate()) {
+                          // AuthCubit()
+                          //     .loginUser(email: email!, password: password!);
+                          
+                          /*. Another way for bloc  */
+                          AuthBloc().add(
+                              LoginEvent(email: email!, password: password!));
+                        }
                       },
                       text: 'Login',
                     ),
@@ -117,32 +131,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-        ));
-  }
-
-  Future<void> loginUser() async {
-    UserCredential user = await FirebaseAuth.instance
-        .signInWithEmailAndPassword(email: email!, password: password!);
-  }
-
-  Future<void> submitButton() async {
-    if (formKey.currentState!.validate()) {
-      isLoading = true;
-      setState(() {});
-      try {
-        await loginUser();
-        Navigator.pushNamed(context, ChatScreen.id, arguments: email);
-      } on FirebaseAuthException catch (ex) {
-        if (ex.code == 'user-not-found') {
-          showSnacbar(context, 'No user found for that email.');
-        } else if (ex.code == 'Wrong password provided for the user.') {
-          showSnacbar(context, 'Wrong password provided for the user.');
-        }
-      } catch (ex) {
-        showSnacbar(context, 'there was an error');
-      }
-      isLoading = false;
-      setState(() {});
-    } else {}
+        ),
+      ),
+    );
   }
 }

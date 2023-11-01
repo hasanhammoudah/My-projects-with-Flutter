@@ -5,8 +5,8 @@ import 'package:weather/models/weather_model.dart';
 /* 'Dio' don't use to check status code because its provides me status code by defult*/
 
 class WeatherService {
-  final Dio dio;
-  WeatherService(this.dio);
+  final Dio dio = Dio();
+
 
   final String baseUrl = 'http://api.weatherapi.com/v1';
   final String apiKey = '0d8e14dfcc724747a3f82000232310';
