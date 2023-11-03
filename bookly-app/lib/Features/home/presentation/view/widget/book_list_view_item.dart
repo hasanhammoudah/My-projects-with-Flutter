@@ -4,8 +4,8 @@ import 'package:booklyapp/core/utils/assets.dart';
 import 'package:booklyapp/core/utils/style.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,9 @@ class BestSellerListViewItem extends StatelessWidget {
                       style: Styles.textStyle20
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
-                    const BookRating(),
+                    const BookRating(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                    ),
                   ],
                 )
               ],
@@ -70,4 +72,3 @@ class BestSellerListViewItem extends StatelessWidget {
     );
   }
 }
-

@@ -57,6 +57,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  dartz:
+    dependency: "direct main"
+    description:
+      name: dartz
+      sha256: e6acf34ad2e31b1eb00948692468c30ab48ac8250e0f0df661e29f12dd252168
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.10.1"
+  dio:
+    dependency: "direct main"
+    description:
+      name: dio
+      sha256: "417e2a6f9d83ab396ec38ff4ea5da6c254da71e4db765ad737a42af6930140b7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.3.3"
+  equatable:
+    dependency: "direct main"
+    description:
+      name: equatable
+      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -91,6 +115,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   font_awesome_flutter:
     dependency: "direct main"
     description:
@@ -99,14 +128,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "10.6.0"
-  get:
+  go_router:
     dependency: "direct main"
     description:
-      name: get
-      sha256: e4e7335ede17452b391ed3b2ede016545706c01a02292a6c97619705e7d2a85e
+      name: go_router
+      sha256: e156bc1b2088eb5ece9351bccd48c3e1719a4858eacbd44e59162e98a68205d1
       url: "https://pub.dev"
     source: hosted
-    version: "4.6.6"
+    version: "12.0.1"
   google_fonts:
     dependency: "direct main"
     description:
@@ -139,6 +168,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
@@ -330,4 +367,4 @@ packages:
     version: "1.0.3"
 sdks:
   dart: ">=3.1.2 <4.0.0"
-  flutter: ">=3.13.0"
+  flutter: ">=3.7.0"
