@@ -21,3 +21,9 @@ https://pub.dev/packages/equatable
 https://pub.dev/packages/dartz
 
 https://pub.dev/packages/dio
+
+https://pub.dev/packages/get_it
+
+https://pub.dev/packages/cached_network_image
+
+https://pub.dev/packages/url_launcher

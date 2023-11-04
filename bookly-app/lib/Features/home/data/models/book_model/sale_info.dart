@@ -2,6 +2,7 @@ class SaleInfo {
   String? country;
   String? saleability;
   bool? isEbook;
+  
 
   SaleInfo({this.country, this.saleability, this.isEbook});
 
