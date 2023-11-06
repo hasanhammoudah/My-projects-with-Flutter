@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:paymentgateways/Features/checkout/repos/checkout_repo_impl.dart';
+import 'package:paymentgateways/Features/presentation/manager/payment_cubit/payment_cubit.dart';
 import 'package:paymentgateways/Features/presentation/views/payment_details.dart';
 import 'package:paymentgateways/Features/presentation/views/widgets/cart_info_item.dart';
+import 'package:paymentgateways/Features/presentation/views/widgets/payment_method_bottom_sheet.dart';
 import 'package:paymentgateways/Features/presentation/views/widgets/payment_method_list_view.dart';
 import 'package:paymentgateways/Features/presentation/views/widgets/total_price.dart';
 import 'package:paymentgateways/core/widgets/custom_button.dart';
@@ -53,44 +57,16 @@ class MyCartViewBody extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16)),
                   builder: (context) {
-                    return const PaymentMethodsBottomSheet();
+                    return BlocProvider(
+                      create: (context) => PaymentCubit(CheckoutRepoImpl()),
+                      child: const PaymentMethodsBottomSheet(),
+                    );
                   });
             },
           ),
           const SizedBox(
             height: 12,
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class PaymentMethodsBottomSheet extends StatelessWidget {
-  const PaymentMethodsBottomSheet({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(16),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const SizedBox(
-            height: 16,
-          ),
-          const PaymentMethodsListView(),
-          const SizedBox(
-            height: 32,
-          ),
-          CustomButton(
-              text: 'Continue',
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return const PaymentDetailsView();
-                }));
-              })
         ],
       ),
     );

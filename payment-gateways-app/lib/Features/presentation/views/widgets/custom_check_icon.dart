@@ -9,7 +9,7 @@ class CustomCheckIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       right: -20,
-      bottom: MediaQuery.sizeOf(context).height * .2 ,
+      bottom: MediaQuery.sizeOf(context).height * .2,
       child: const CircleAvatar(
         backgroundColor: Colors.white,
       ),
