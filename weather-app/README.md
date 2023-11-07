@@ -20,27 +20,37 @@ Resources:⬇️⬇️⬇️⬇️⬇️
 <img src="assets/images/screenshot-1698175753767.png" alt="Example Image 3" width="500" height="500" >
 <br></br><br></br>
 <img src="assets/images/screenshot-1698339333825.png" alt="Example Image 3" width="500" height="500" >
-<!-- Create a container for the grid -->
-<div class="grid-container">
-    <!-- Add individual grid items with images -->
-    <div class="grid-item">
-        <img src="assets/images/screenshot-1698175702219.png" alt="Image 1">
-    </div>
-    <div class="grid-item">
-        <img src="assets/images/screenshot-1698175702219.png" alt="Image 2">
-    </div>
-    <!-- Add more grid items as needed -->
-</div>
 
-<style>
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-    grid-gap: 10px; /* Adjust the gap between grid items */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+            grid-gap: 10px; /* Adjust the gap between grid items */
+        }
 
-/* Style for individual grid items */
-.grid-item {
-    text-align: center; /* Center the image within each grid item */
-}
-</style>
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="assets/images/screenshot-1698339333825.png" alt="Image 1">
+        </div>
+        <div class="grid-item">
+            <img src="assets/images/screenshot-1698339333825.png" alt="Image 2">
+        </div>
+        <!-- Add more grid items as needed -->
+    </div>
+</body>
+</html>
