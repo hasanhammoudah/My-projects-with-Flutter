@@ -30,11 +30,10 @@ Resources:⬇️⬇️⬇️⬇️⬇️
     <style>
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-            grid-gap: 10px; /* Adjust the gap between grid items */
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px; 
         }
-
-        .grid-item img {
+   .grid-item img {
             max-width: 100%;
             height: auto;
             display: block;
