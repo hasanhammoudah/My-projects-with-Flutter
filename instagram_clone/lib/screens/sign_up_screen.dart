@@ -1,10 +1,12 @@
-import 'dart:ffi';
 import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:instagram_clone/resources/auth_methods.dart';
+import 'package:instagram_clone/responsive/mobile_screen_layout.dart';
+import 'package:instagram_clone/responsive/responsive_layout_screen.dart';
+import 'package:instagram_clone/responsive/web_screen_layout.dart';
+import 'package:instagram_clone/screens/login_screen.dart';
 import 'package:instagram_clone/utils/colors.dart';
 import 'package:instagram_clone/utils/utils.dart';
 import 'package:instagram_clone/widgets/text_field_input.dart';
@@ -56,7 +58,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
     });
     if (res != 'success') {
       showSnacbar(res, context);
+    } else {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return const ResponsiveLayout(
+            webScreenLayout: WebScreenLayout(),
+            mobileScreenLayout: MobileScreenLayout());
+      }));
     }
+  }
+
+  void navigateToLogin() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const LoginScreen();
+    }));
   }
 
 // on FirebaseAuthException catch (err) {
@@ -183,14 +197,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: [
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: const Text("Don't have an account?"),
+                    child: const Text("Do you have an account?"),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: navigateToLogin,
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: const Text(
-                        "Sign up",
+                        "Log in",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
