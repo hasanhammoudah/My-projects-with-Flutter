@@ -23,16 +23,16 @@ class FireStoreMethods {
           await StorageMethods().uploadImageToStorage('posts', file, true);
       String postId = const Uuid().v1();
 
-      var currentDate = DateTime.now();
       Post post = Post(
-          description: description,
-          uid: uid,
-          username: username,
-          postId: postId,
-          datePublished: currentDate.toString(),
-          postUrl: postUrl,
-          profImage: profImage,
-          likes: []);
+        description: description,
+        uid: uid,
+        username: username,
+        postId: postId,
+        datePublished: DateTime.now(),
+        postUrl: photoUrl,
+        profImage: profImage,
+        likes: [],
+      );
       _firestore.collection('posts').doc(postId).set(post.toJson());
       res = "success";
     } catch (e) {
@@ -83,6 +83,16 @@ class FireStoreMethods {
       print(
         e.toString(),
       );
+    }
+  }
+
+  // DELETEING POST
+
+  Future<void> deletePost(String postId) async {
+    try {
+      await _firestore.collection('posts').doc(postId).delete();
+    } catch (e) {
+      print(e.toString());
     }
   }
 }
