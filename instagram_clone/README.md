@@ -7,13 +7,13 @@ A new Flutter project.
 
 <img src="assets/images/screenshot-1701272792606.png" alt="Example Image 1" width="300" height="400">
 <br></br><br></br>
-<img src="assets/images/screenshot-1701272808504.png" alt="Example Image 1" width="500" height="300">
+<img src="assets/images/screenshot-1701272808504.png" alt="Example Image 1" width="300" height="400">
 <br></br><br></br>
-<img src="assets/images/screenshot-1701272821593.png" alt="Example Image 1" width="500" height="300">
+<img src="assets/images/screenshot-1701272821593.png" alt="Example Image 1" width="300" height="400">
 <br></br><br></br>
-<img src="assets/images/screenshot-1701272832910.png" alt="Example Image 1" width="500" height="500">
+<img src="assets/images/screenshot-1701272832910.png" alt="Example Image 1" width="300" height="400">
 <br></br><br></br>
-<img src="assets/images/screenshot-1701272859098.png" alt="Example Image 1" width="500" height="500">
+<img src="assets/images/screenshot-1701272859098.png" alt="Example Image 1" width="300" height="400">
 <br></br><br></br>
-<img src="assets/images/screenshot-1701272869990.png" alt="Example Image 1" width="500" height="500">
+<img src="assets/images/screenshot-1701272869990.png" alt="Example Image 1" width="300" height="400">
 
