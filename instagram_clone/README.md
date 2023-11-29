@@ -1,7 +1,6 @@
 # instagram_clone
-
-A new Flutter project.
-
+<h3>I've crafted a remarkable project named 'Instagram,' mirroring the features of the authentic Instagram app. I'm thrilled about the awesomeness embedded in this creation, showcasing not only my skill but also the wealth of experience I bring to its development.
+</h3>
 ## Getting Started
 
 
