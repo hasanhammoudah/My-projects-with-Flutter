@@ -5,7 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 
-<img src="assets/images/screenshot-1701272792606.png" alt="Example Image 1" width="500" height="300">
+<img src="assets/images/screenshot-1701272792606.png" alt="Example Image 1" width="300" height="400">
 <br></br><br></br>
 <img src="assets/images/screenshot-1701272808504.png" alt="Example Image 1" width="500" height="300">
 <br></br><br></br>
