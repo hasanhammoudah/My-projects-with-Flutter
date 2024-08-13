@@ -8,7 +8,7 @@ final class NewsetBooksCubitInitial extends NewsetBooksCubitState {}
 final class NewsetBooksCubitLoading extends NewsetBooksCubitState {}
 
 final class NewsetBooksCubitSuccess extends NewsetBooksCubitState {
-  final List<BookModel> books;
+  final List<BookEntity> books;
   NewsetBooksCubitSuccess(this.books);
 }
 

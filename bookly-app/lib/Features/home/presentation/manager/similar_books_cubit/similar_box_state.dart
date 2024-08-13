@@ -7,7 +7,7 @@ final class SimilarBoxInitial extends SimilarBoxState {}
 final class SimilarBoxLoading extends SimilarBoxState {}
 
 final class SimilarBoxsuccess extends SimilarBoxState {
-  final List<BookModel> books;
+  final List<BookEntity> books;
   SimilarBoxsuccess(this.books);
 }
 

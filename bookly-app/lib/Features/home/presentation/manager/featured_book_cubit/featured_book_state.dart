@@ -8,7 +8,7 @@ final class FeaturedBookInitial extends FeaturedBookState {}
 final class FeaturedBookLoading extends FeaturedBookState {}
 
 final class FeaturedBookSuccess extends FeaturedBookState {
-  final List<BookModel> books;
+  final List<BookEntity> books;
   FeaturedBookSuccess(this.books);
 }
 

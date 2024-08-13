@@ -27,3 +27,6 @@ https://pub.dev/packages/get_it
 https://pub.dev/packages/cached_network_image
 
 https://pub.dev/packages/url_launcher
+
+
+flutter packages pub run build_runner build ====> To Generate build runner

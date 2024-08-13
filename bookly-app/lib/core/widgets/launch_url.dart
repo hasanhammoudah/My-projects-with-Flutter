@@ -1,4 +1,4 @@
-import 'package:booklyapp/core/utils/functions/custom_snacbar.dart';
+import 'package:booklyapp/core/widgets/custom_snacbar.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
