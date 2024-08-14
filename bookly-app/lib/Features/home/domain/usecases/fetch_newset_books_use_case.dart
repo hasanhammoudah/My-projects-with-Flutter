@@ -4,11 +4,11 @@ import 'package:booklyapp/core/errors/failures.dart';
 import 'package:booklyapp/core/utils/usecase.dart';
 import 'package:dartz/dartz.dart';
 
-class FetchNewSetBooksUseCase extends UseCaseWithNoParams<List<BookEntity>> {
+class FetchNewSetBooksUseCase extends UseCase<List<BookEntity>,NoParam> {
   final HomeRepo homeRepo;
   FetchNewSetBooksUseCase(this.homeRepo);
 
   @override
-  Future<Either<Failure, List<BookEntity>>> call() =>
+  Future<Either<Failure, List<BookEntity>>> call([NoParam? param]) =>
       homeRepo.fetchNewsetBooks();
 }

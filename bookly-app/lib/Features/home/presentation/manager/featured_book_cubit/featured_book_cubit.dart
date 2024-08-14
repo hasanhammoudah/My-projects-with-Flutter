@@ -9,7 +9,6 @@ part 'featured_book_state.dart';
 class FeaturedBookCubit extends Cubit<FeaturedBookState> {
   FeaturedBookCubit(this.featuredBooksUseCase) : super(FeaturedBookInitial());
 
-  static FeaturedBookCubit get(context) => BlocProvider.of(context);
 
   final FetchFeaturedBooksUseCase featuredBooksUseCase;
 
